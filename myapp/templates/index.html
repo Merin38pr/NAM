@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Select a Story{% endblock %}
+
+{% block content %}
+<h2>Select a Genre</h2>
+<div class="genres">
+    {% for genre in genrelist %}
+        <a href="{% url 'story' genre %}" class="genre">{{ genre|title }}</a>
+    {% endfor %}
+</div>
+{% endblock %}

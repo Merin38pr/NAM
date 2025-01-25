@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ genre|title }} Story{% endblock %}
+
+{% block content %}
+<h2>{{ genre|title }} Story</h2>
+<p id="story-text">{{ story }}</p>
+<button onclick="speakStory()">Listen to the Story</button>
+<a href="/">Back to Genres</a>
+{% endblock %}
