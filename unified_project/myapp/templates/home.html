@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            background-color: #e0bbf1; /* Light purple */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 4rem;
+            color: #6a4c9c;
+            text-align: center;
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+        p {
+            font-size: 1.5rem;
+            color: #4b4b4b;
+            text-align: center;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+        li {
+            margin: 15px 0;
+            text-align: center;
+        }
+        a {
+            font-size: 1.2rem;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            background-color: #6a4c9c;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        a:hover {
+            transform: scale(1.1);
+            background-color: #9b6bcf;
+        }
+        a:active {
+            transform: scale(0.95);
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Chatty!</h1>
+    <p>Select an app to explore:</p>
+    <ul>
+        <li><a href="/myapp/">Story Teller</a></li>
+        <li><a href="/chatbot_app/">Chatbot</a></li>
+    </ul>
+</body>
+</html>
+
