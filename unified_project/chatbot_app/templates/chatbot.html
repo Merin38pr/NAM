@@ -4,6 +4,121 @@
     <title>Chatbot</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #f8c8d4, #b6e1ff); /* Light pink to light blue gradient */
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 800px;
+            height: 80vh;
+            background-color: white;
+            border-radius: 25px; /* Bubble-like rounded corners */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff66b2; /* Light pink */
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .new-chat-container {
+            text-align: center;
+        }
+
+        .new-chat-button {
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            background-color: #f4c2c2; /* Baby pink */
+            color: white;
+            border: none;
+            border-radius: 30px; /* Rounded corners for bubble effect */
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .new-chat-button:hover {
+            background-color: #f1a8a8; /* Lighter baby pink */
+            transform: scale(1.05);
+        }
+
+        .chat-history {
+            max-height: 60vh;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            padding-right: 15px;
+            background-color: #f4f8ff; /* Light blue background for chat history */
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        .chat-message {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .user-message {
+            background-color: #b6e1ff; /* Light blue for user messages */
+            padding: 12px;
+            border-radius: 25px; /* Bubble-like message */
+            margin-bottom: 5px;
+            color: black; /* Change text color to black */
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .bot-message {
+            background-color: #ffb3d9; /* Light pink for bot messages */
+            padding: 12px;
+            border-radius: 25px; /* Bubble-like message */
+            color: black; /* Change text color to black */
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        button[type="submit"] {
+            padding: 12px 24px;
+            background-color: #f4c2c2; /* Baby pink */
+            color: white;
+            border: none;
+            border-radius: 25px; /* Bubble-like button */
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #f1a8a8; /* Lighter baby pink */
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
     <div class="chat-container">
@@ -33,3 +148,4 @@
     </div>
 </body>
 </html>
+
